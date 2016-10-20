@@ -1,7 +1,7 @@
 (function() {
 
   'use strict';
-  
+
   angular
     .module('lovely.components.main', ['OSLS'])
     .controller('mainController', mainController);
@@ -11,7 +11,7 @@
   function mainController($scope, lovelyService) {
     /*jshint validthis: true */
     this.test = 'Something';
-    this.serviceTest = lovelyService.test
+    this.serviceTest = lovelyService.test;
   }
 
 })();

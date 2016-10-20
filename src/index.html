@@ -15,8 +15,8 @@
         <a href="#!" class="brand-logo">Our Something Lovely</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Shop</a></li>
-          <li><a href="mobile.html">About</a></li>
+          <li><a href="/#/shop">Shop</a></li>
+          <li><a href="/#/about">About</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a>Products</a></li>
@@ -25,10 +25,8 @@
       </div>
     </nav>
 
+    <div ng-view></div>
 
-
-      <div ng-view></div>
-    </div>
     <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -65,6 +63,9 @@
     <script type="text/javascript" src="js/config.js"></script>
     <!-- main component -->
     <script type="text/javascript" src="js/components/main/main.controller.js"></script>
-    <script type="text/javascript" src="js/components/services/services.lovelyService.js"></script>
+    <script type="text/javascript" src="js/components/main/main.service.js"></script>
+    <script src="js/components/shop/shop.controller.js" charset="utf-8"></script>
+    <script src="js/components/shop/shop.service.js" charset="utf-8"></script>
+    <script src="js/components/shop/shop.directive.js" charset="utf-8"></script>
   </body>
 </html>

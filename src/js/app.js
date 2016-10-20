@@ -4,14 +4,15 @@
 
   'use strict';
 
-  $(".button-collapse").sideNav();
+  $('.button-collapse').sideNav();
 
   angular
     .module('lovely', [
       'ngRoute',
+      'ui.materialize',
       'lovely.config',
       'lovely.components.main',
-      'ui.materialize'
+      'lovely.components.shop'
     ]);
 
 })();

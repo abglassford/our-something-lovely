@@ -13,7 +13,12 @@
       controller: 'mainController',
       controllerAs: 'mainCtrl'
     })
-    .otherwise('/')
+    .when('/shop', {
+      templateUrl: 'js/components/shop/shop.cart.html',
+      controller: 'ShopController',
+      controllerAs: 'shopCtrl'
+    })
+    .otherwise('/');
   }
 
 })();
