@@ -1,4 +1,7 @@
 /* add custom styles */
+body {
+  background-image: url('../img/wild_flowers.png')
+}
 .nav-wrapper {
   padding: 0px 10px 0px 10px;
 }
