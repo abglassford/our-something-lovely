@@ -1,7 +1,7 @@
 (function() {
 
   'use strict';
-
+  
   angular
     .module('lovely.components.main', ['OSLS'])
     .controller('mainController', mainController);

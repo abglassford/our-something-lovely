@@ -1,1 +1,11 @@
 /* add custom styles */
+.nav-wrapper {
+  padding: 0px 10px 0px 10px;
+}
+.slides {
+  height: 600px !important;
+}
+.slider {
+  height: 650px !important;
+  margin-top: 30px;
+}
