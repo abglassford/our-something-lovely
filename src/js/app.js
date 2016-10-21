@@ -12,7 +12,8 @@
       'ui.materialize',
       'lovely.config',
       'lovely.components.main',
-      'lovely.components.shop'
+      'lovely.components.shop',
+      'lovely.components.cart'
     ]);
 
 })();

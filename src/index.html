@@ -6,17 +6,20 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body ng-cloak>
     <!-- sample angular code -->
     <nav>
       <div class="nav-wrapper">
+        <a href="#!"><img class="logo" src="img/our-something.png"></a>
         <a href="#!" class="brand-logo">Our Something Lovely</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="/#/shop">Shop</a></li>
           <li><a href="/#/about">About</a></li>
+          <li><a href="/#/cart"><i class="material-icons">shopping_cart</i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a>Products</a></li>
@@ -61,11 +64,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
+    <script src="js/components/shop/shop.config.js" charset="utf-8"></script>
+    <script src="js/components/cart/cart.config.js" charset="utf-8"></script>
     <!-- main component -->
     <script type="text/javascript" src="js/components/main/main.controller.js"></script>
     <script type="text/javascript" src="js/components/main/main.service.js"></script>
     <script src="js/components/shop/shop.controller.js" charset="utf-8"></script>
     <script src="js/components/shop/shop.service.js" charset="utf-8"></script>
-    <script src="js/components/shop/shop.directive.js" charset="utf-8"></script>
+    <script src="js/components/cart/cart.controller.js" charset="utf-8"></script>
+
   </body>
 </html>

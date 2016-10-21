@@ -3,7 +3,7 @@ body {
   background-image: url('../img/wild_flowers.png')
 }
 .nav-wrapper {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 0px;
 }
 .slides {
   height: 610px !important;
@@ -23,4 +23,22 @@ body {
 }
 .indicator-item.active {
   background-color: #009688 !important;
+}
+.brand-logo {
+  font-family: 'Dancing Script', cursive;
+}
+.logo {
+  margin-right: 15px;
+  height: 64px;
+}
+.item {
+  height: 100px;
+  margin: 15px !important;
+}
+.oos {
+  color: rgb(247, 75, 75);
+  font-size: 20px;
+}
+.notes {
+  display: inline;
 }

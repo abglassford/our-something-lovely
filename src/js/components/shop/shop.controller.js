@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-    .module('lovely.components.shop', [])
+    .module('lovely.components.shop')
     .controller('ShopController', ShopController)
 
-    ShopController.$inject = []
+    ShopController.$inject = ['$location', 'ShopService']
 
-    function ShopController () {
-      
+    function ShopController ($location, ShopService) {
+      this.inventory = ShopService.inventory
     }
 }());
