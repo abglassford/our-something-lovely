@@ -28,17 +28,19 @@ body {
   font-family: 'Dancing Script', cursive;
 }
 .logo {
-  margin-right: 15px;
-  height: 64px;
+  margin: 0 15px 0 15px;
+  height: 44px;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 .item {
   height: 100px;
   margin: 15px !important;
 }
+.shop-image{
+  margin-left: 20px;
+}
 .oos {
   color: rgb(247, 75, 75);
   font-size: 20px;
-}
-.notes {
-  display: inline;
 }
