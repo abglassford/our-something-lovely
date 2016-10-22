@@ -29,18 +29,17 @@ body {
   border-radius: 50%;
   vertical-align: middle;
 }
-.item {
-  height: 100px;
-  margin: 15px !important;
-}
-.shop-image{
-  margin-left: 20px;
-}
 .oos {
   color: rgb(247, 75, 75);
   font-size: 20px;
 }
-.list-container {
-  background-color: transparent;
-  box-shadow: none;
+.quantity-select{
+  width: 50px;
+}
+.cart-nav {
+  margin: 15px 0px 15px 0px;
+}
+.add-to-cart {
+  width: 100%;
+  padding: 0px;
 }

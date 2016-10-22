@@ -9,6 +9,10 @@
 
   function ShopService () {
 
+    this.cart = {
+      list: [],
+    }
+
     this.inventory = [
       {
           "_id": "55c8ee82152165d244b98300",
