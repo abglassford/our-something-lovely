@@ -8,6 +8,9 @@
     ShopService.$inject = []
 
   function ShopService () {
+
+    this.priceSort = 'price'
+
     this.inventory = [
       {
           "_id": "55c8ee82152165d244b98300",

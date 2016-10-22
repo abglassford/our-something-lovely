@@ -9,5 +9,9 @@
 
     function ShopController ($location, ShopService) {
       this.inventory = ShopService.inventory
+      this.sortBy = function (selection) {
+        this.priceSort = selection
+      }
+
     }
 }());
