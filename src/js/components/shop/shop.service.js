@@ -9,8 +9,6 @@
 
   function ShopService () {
 
-    this.priceSort = 'price'
-
     this.inventory = [
       {
           "_id": "55c8ee82152165d244b98300",
@@ -22,7 +20,7 @@
           "rating": 1,
           "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$",
           "__v": 0,
-          "categories": [ "dark", "cold"]
+          "categories": ["dark", "cold"]
       },
 
       {
@@ -134,5 +132,7 @@
           "categories": ["spring", "warm","winter"]
       }
     ]
+
+  this.categories = Array.from(new Set(this.inventory.reduce((prev, curr) => [...prev, ...curr.categories], [])))
   }
 }());

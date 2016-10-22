@@ -1,21 +1,32 @@
 <div class="container">
   <div class="row">
+    <br>
     <div class="list-container col m12 card-panel black-text">
-      <ul id='demoDropdown' class='dropdown-content'>
-        <li><a ng-click="vm.sortBy('-price')">Highest to Lowest</a></li>
-        <li><a ng-click="vm.sortBy('price')">Lowest to Highest</a></li>
-      </ul>
-      <nav class="list teal">
-        <div class="nav-wrapper right">
-          <ul id="nav-mobile" class="left">
-            <li>
-              <a class='dropdown-button btn' href='javascript:void(0);' data-activates='demoDropdown' dropdown data-hover="true">Sort by price</a>
-            </li>
-            <li> <a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="row card-panel"ng-repeat="item in vm.inventory | orderBy: vm.priceSort">
+      <div class="row">
+        <ul id='priceDropdown' class='dropdown-content'>
+          <li><a ng-click="vm.priceSort('-price')">Highest to Lowest</a></li>
+          <li><a ng-click="vm.priceSort('price')">Lowest to Highest</a></li>
+        </ul>
+        <ul id='categoryDropdown' class='dropdown-content'>
+          <li ng-repeat="category in vm.categories" ng-click="vm.categoryFilter(category)"><a ng-model="category">{{category}}</a></li>
+        </ul>
+        <nav class="list teal">
+          <div class="nav-wrapper right">
+            <ul id="nav-mobile" class="left">
+              <li>
+                <a class='dropdown-button btn' data-activates='categoryDropdown' dropdown data-hover="true">Sort by Category</a>
+              </li>
+              <li>
+                <a class='dropdown-button btn' data-activates='priceDropdown' dropdown data-hover="true">Sort by price</a>
+              </li>
+              <li>
+                <a href="#/cart"><i class="material-icons">shopping_cart</i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="row card-panel"ng-repeat="item in vm.inventory | orderBy: vm.price | filter : vm.category">
         <div class="col m4 s12">
           <div class="shop-image-div">
             <span class="oos" ng-show="{{!item.inStock}}">Out of Stock!</span>
@@ -24,6 +35,7 @@
         </div>
         <div class="col m6 s8">
           <div class="item-info">
+
             <h3>{{item.name}} </h3>
             <h4>{{item.price | monetize | currency}}</h4>
             <p><b>Caffeine Scale:</b> {{item.caffeineScale}}</p>
@@ -36,7 +48,6 @@
         </div>
         <div class="class col m2 s4">
           <p>cart options go here</p>
-
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 ## To Do:
 - Search by name
-- Search by category with drop down list
-- Table with column for image, and tea information
+<!-- - Search by category with drop down list -->
+<!-- - Table with column for image, and tea information -->
 - Quantity drop down number list
 - Add to bag button
 - New items added to bag default to qty of 1, if no qty is selected
@@ -10,7 +10,7 @@
 - Tea information section has:
 <!-- - Price, Caffeine Scale, Ingredients, Rating -->
 <!-- - In Stock? - shows Yes or No when True/False respectively -->
-- Categories - goes through categories list and displays each one
+<!-- - Categories - goes through categories list and displays each one -->
 - Checkout page
 - Order total
 - Lists each item that was added from the previous page, and includes its quantity
