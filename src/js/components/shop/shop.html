@@ -7,7 +7,7 @@
     <ul id='categoryDropdown' class='dropdown-content'>
       <li ng-repeat="category in vm.categories" ng-click="vm.categoryFilter(category)"><a ng-model="category">{{category}}</a></li>
     </ul>
-    <nav class="list teal">
+    <nav class="list #ee6e73">
       <div class="nav-wrapper left">
         <ul id="nav-mobile" class="left">
           <li>
@@ -22,6 +22,9 @@
           </li>
           <li>
             <a href="#/cart"><i class="material-icons">shopping_cart</i></a>
+          </li>
+          <li>
+            <span ng-show="vm.cartCount() > 0" class="badge count">{{vm.cartCount()}}</span>
           </li>
         </ul>
       </div>
@@ -38,23 +41,30 @@
       <div class="item-info">
         <h3>{{item.name}} </h3>
         <h4>{{item.price | monetize | currency}}</h4>
-        <p><b>Caffeine Scale:</b> {{item.caffeineScale}}</p>
         <p><b>Ingredients:</b> {{item.ingredients}}</p>
-        <p><b>Rating:</b> {{item.rating}}</p>
-        <ul><b>notes:</b>
-          <li class="notes" ng-repeat="category in item.categories">{{category}}</li>
-        </ul>
+        <div class="row">
+          <div class="col m4">
+            <ul><b>notes:</b>
+              <li class="notes" ng-repeat="category in item.categories">{{category}}</li>
+            </ul>
+          </div>
+          <div class="col m4">
+            <p><b>Caffeine Scale:</b> {{item.caffeineScale}}</p>
+          </div>
+          <div class="col m4">
+            <p><b>Rating:</b> {{item.rating}}</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="class col m2 s4">
       <div input-field>
         <label for="quantity-select">Quantity: </label>
-        <select class="quantity-select right" ng-model="item.multiplier" ng-options="number for number in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch>
+        <select class="quantity-select right" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-options="number for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch>
         </select>
-
       </div>
       <div class="">
-        <a class="wave effect waves-light btn add-to-cart" ng-click="vm.addToCart(item, item.multiplier)">Add To Cart</a>
+        <a class="wave effect waves-light btn add-to-cart" ng-click="vm.addToCart(item)">Add To Cart</a>
       </div>
     </div>
   </div>

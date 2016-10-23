@@ -8,24 +8,34 @@
     ShopController.$inject = ['$location', 'ShopService']
 
     function ShopController ($location, ShopService) {
+      this.cartCount = () => ShopService.cart.count
       this.categories = ShopService.categories
       this.inventory = ShopService.inventory
       this.priceSort = (price) => {
         this.price = price
       }
       this.categoryFilter = (category) => {
+
         this.category = category
       }
-      this.addToCart = (item, quantity) => {
-        if (ShopService.cart.list.includes(item)) {
-          console.log('quantity', quantity);
-          item.quantity++
-          // console.log(ShopService.cart.list);
-        } else {
-          item.quantity = 1
+      this.addToCart = (item) => {
+        if (!ShopService.cart.list.includes(item)) {
+          item.count = item.multiplier
+          ShopService.cart.count += item.multiplier
           ShopService.cart.list.push(item)
-          // console.log(ShopService.cart.list);
+        } else {
+          ShopService.cart.count += item.multiplier
+          item.count += item.multiplier
         }
+        this.multiplier = 1
+        console.log(ShopService.cart);
+
+
+
+
+
+
+
       }
     }
 }());

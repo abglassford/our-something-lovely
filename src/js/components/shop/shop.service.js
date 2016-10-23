@@ -11,6 +11,7 @@
 
     this.cart = {
       list: [],
+      count: 0
     }
 
     this.inventory = [

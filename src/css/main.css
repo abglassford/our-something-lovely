@@ -43,3 +43,9 @@ body {
   width: 100%;
   padding: 0px;
 }
+.count {
+  background-color: transparent !important;
+  color: #26A69A !important;
+  right: 8px !important;
+    bottom: 4px !important;
+}
