@@ -1,3 +1,61 @@
-<div class="">
-  This is the cart
+<div class="container">
+  <div class="row cart-list">
+    <div class="row card-panel cart-panel white-text">
+      <div class="col m6">
+        <h4 class="bagTitle">My Shopping Bag</h4>
+      </div>
+      <div class="col m6">
+        <h4 class="total right">Order Total: {{vm.total | monetize | currency}}</h4>
+      </div>
+    </div>
+    <div class="item-list row card-panel"ng-repeat="item in vm.cart()">
+      <div class="col m4 s12">
+        <div class="shop-image-div">
+          <img class="shop-image" ng-src="{{item.imageUrl}}" alt="image" />
+        </div>
+      </div>
+      <div class="col m6 s8">
+        <div class="item-info">
+          <h3>{{item.name}} </h3>
+          <h4>{{item.price | monetize | currency}}</h4>
+          <p><b>Ingredients:</b> {{item.ingredients}}</p>
+          <div class="row">
+            <div class="col m4">
+              <ul><b>notes:</b>
+                <li class="notes" ng-repeat="category in item.categories">{{category}}</li>
+              </ul>
+            </div>
+            <div class="col m4">
+              <p><b>Caffeine Scale:</b> {{item.caffeineScale}}</p>
+            </div>
+            <div class="col m4">
+              <p><b>Rating:</b> {{item.rating}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="class col m2 s4">
+        <div class="row">
+          {{vm.edit}}
+          <div class="quantity">
+            <div input-field ng-show="vm.edit">
+              <label for="cart-quantity-select">Quantity: </label>
+              <select class="cart-quantity-select right" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-options="number for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch>
+              </select>
+            </div>
+            <p ng-show="!vm.edit"><b>Quantity:</b> {{item.count}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <a class="cartButton wave effect waves-light yellow lighten-1 btn black-text" ng-click="vm.showEdit()">
+            <span ng-show="!vm.edit">Edit</span>
+            <span ng-show="vm.edit">Done</span></a>
+          <a class="cartButton wave effect waves-light btn deep-orange darken-4">Remove</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
