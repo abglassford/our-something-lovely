@@ -10,8 +10,7 @@
 
   function mainController($scope, lovelyService) {
     /*jshint validthis: true */
-    this.test = 'Something';
-    this.serviceTest = lovelyService.test;
+    this.test = "test"
   }
 
 })();

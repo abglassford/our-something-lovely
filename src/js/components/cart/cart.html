@@ -8,7 +8,7 @@
         <h4 class="total right">Order Total: {{vm.total | monetize | currency}}</h4>
       </div>
     </div>
-    <div class="item-list row card-panel"ng-repeat="item in vm.cart()">
+    <div class="item-list row card-panel"ng-repeat="item in vm.cart">
       <div class="col m4 s12">
         <div class="shop-image-div">
           <img class="shop-image" ng-src="{{item.imageUrl}}" alt="image" />
@@ -42,7 +42,7 @@
               <select class="cart-quantity-select right" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-options="number for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch>
               </select>
             </div>
-            <p ng-show="!vm.edit"><b>Quantity:</b> {{item.multiplier}}</p>
+            <p ng-show="!vm.edit"><b>Quantity:</b> {{item.count}}</p>
           </div>
         </div>
 

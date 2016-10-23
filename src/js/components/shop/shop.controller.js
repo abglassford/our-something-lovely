@@ -21,21 +21,14 @@
       this.addToCart = (item) => {
         if (!ShopService.cart.list.includes(item)) {
           item.count = item.multiplier
-          ShopService.cart.count += item.multiplier
+          ShopService.cart.count += item.count
           ShopService.cart.list.push(item)
+          item.multiplier = 1
         } else {
           ShopService.cart.count += item.multiplier
           item.count += item.multiplier
+          item.multiplier = 1
         }
-        this.multiplier = 1
-        console.log(ShopService.cart);
-
-
-
-
-
-
-
       }
     }
 }());

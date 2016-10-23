@@ -7,23 +7,22 @@
 
     CartController.$inject = ['ShopService']
 
-    function CartController (ShopService) {
-      this.total = 10000
-      this.edit = false;
-      this.cart = () => ShopService.cart.list
-      this.showEdit = (item) => {
-        if (this.edit === true) {
-          this.edit = false
-        } else {
-          this.edit = true
-        }
-        console.log(this.edit);
-      }
-
-
-      this.remove = (item) => {
-        this.cart().splice(this.cart().indexOf(item), 1)
+  function CartController (ShopService) {
+    this.total = ShopService.total
+    this.edit = false;
+    this.cart = ShopService.cart.list
+    this.showEdit = (item) => {
+      if (this.edit === true) {
+        item.count = item.multiplier
+        this.edit = false
+      } else {
+        item.multiplier = item.count
+        this.edit = true
       }
     }
+    this.remove = (item) => {
+      ShopService.cart.list.splice(ShopService.cart.list.indexOf(item), 1)
+    }
+  }
 
 }());
