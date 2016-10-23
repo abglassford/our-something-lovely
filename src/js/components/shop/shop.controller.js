@@ -21,14 +21,13 @@
       this.addToCart = (item) => {
         if (!ShopService.cart.list.includes(item)) {
           item.count = item.multiplier
-          ShopService.cart.count += item.count
           ShopService.cart.list.push(item)
-          item.multiplier = 1
         } else {
-          ShopService.cart.count += item.multiplier
           item.count += item.multiplier
-          item.multiplier = 1
         }
+        ShopService.cart.count += item.multiplier
+        ShopService.subtotal += item.price * item.multiplier
+        item.multiplier = 1
       }
     }
 }());

@@ -9,8 +9,6 @@
 
   function ShopService () {
     this.subtotal = 0
-    this.tax = 1.07
-    this.total = this.subtotal * this.tax
 
     this.cart = {
       list: [],
