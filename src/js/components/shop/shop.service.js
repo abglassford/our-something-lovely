@@ -46,7 +46,7 @@
           "ingredients": "hot sauce, iron, beetle nut, fresco, blarney, raw mashed potato",
           "caffeineScale": 38,
           "price": 4991,
-          "inStock": true,
+          "inStock": false,
           "rating": 4,
           "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
           "__v": 0,

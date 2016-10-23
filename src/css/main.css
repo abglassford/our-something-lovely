@@ -32,6 +32,7 @@ body {
 .oos {
   color: rgb(247, 75, 75);
   font-size: 20px;
+  padding-top: 15px;
 }
 .quantity-select{
   width: 50px;
@@ -42,10 +43,5 @@ body {
 .add-to-cart {
   width: 100%;
   padding: 0px;
-}
-.count {
-  background-color: transparent !important;
-  color: #26A69A !important;
-  right: 8px !important;
-    bottom: 4px !important;
+  margin-bottom: 15px;
 }
