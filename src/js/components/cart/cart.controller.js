@@ -10,7 +10,8 @@
     function CartController (ShopService) {
       this.total = 10000
       this.edit = false;
-      this.showEdit = () => {
+      this.cart = () => ShopService.cart.list
+      this.showEdit = (item) => {
         if (this.edit === true) {
           this.edit = false
         } else {
@@ -18,8 +19,11 @@
         }
         console.log(this.edit);
       }
-      this.cart = () => ShopService.cart.list
-      this.test = 'cart controller'
+
+
+      this.remove = (item) => {
+        this.cart().splice(this.cart().indexOf(item), 1)
+      }
     }
 
 }());

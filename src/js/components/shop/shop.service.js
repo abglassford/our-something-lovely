@@ -24,7 +24,7 @@
           "multiplier": 1,
           "categories": ["dark", "cold"]
       }],
-      count: 0
+      count: 1
     }
 
     this.inventory = [
