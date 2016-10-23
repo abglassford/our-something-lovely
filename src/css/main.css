@@ -45,3 +45,9 @@ body {
   padding: 0px;
   margin-bottom: 15px;
 }
+#search {
+  margin-left: 5px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #26A69A;
+  width: 170px;
+}

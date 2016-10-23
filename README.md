@@ -2,7 +2,7 @@
 - Search by name
 <!-- - Search by category with drop down list -->
 <!-- - Table with column for image, and tea information -->
-- Quantity drop down number list
+<!-- - Quantity drop down number list -->
 - Add to bag button
 - New items added to bag default to qty of 1, if no qty is selected
 - Checkout button
