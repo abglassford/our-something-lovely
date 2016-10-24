@@ -8,7 +8,6 @@
     ShopController.$inject = ['$location', 'ShopService']
 
     function ShopController ($location, ShopService) {
-      ShopService.getEtsy()
       this.cartCount = () => ShopService.cart.count
       this.categories = ShopService.categories
       this.inventory = ShopService.inventory
