@@ -8,6 +8,7 @@
     ShopService.$inject = []
 
   function ShopService () {
+    
     this.subtotal = 0
 
     this.cart = {

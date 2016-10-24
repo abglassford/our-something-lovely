@@ -8,10 +8,21 @@
     CartController.$inject = ['ShopService']
 
   function CartController (ShopService) {
-    console.log(ShopService.subtotal);
-    this.total = ShopService.subtotal * 1.07
+
     this.edit = false;
+    this.total = ShopService.subtotal
     this.cart = ShopService.cart.list
+
+    // this.getTotal = () => {
+    //   this.total = this.cart.reduce((prev, curr) => {
+    //     return prev.price * prev.count + curr.price * curr.count
+    //   })
+    // }
+
+    // console.log(this.getTotal());
+
+
+    // this.categories = Array.from(new Set(this.inventory.reduce((prev, curr) => [...prev, ...curr.categories], [])))
 
     this.showEdit = (item) => {
       if (this.edit === true) {
@@ -28,7 +39,8 @@
     this.remove = (item) => {
       ShopService.cart.list.splice(ShopService.cart.list.indexOf(item), 1)
       ShopService.cart.count -= item.count
-      this.total -= item.count * item.price * 1.07
+      ShopService.subtotal -= (item.count * item.price)
+      this.total = ShopService.subtotal
     }
   }
 
