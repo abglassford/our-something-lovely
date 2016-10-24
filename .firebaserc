@@ -1,5 +1,5 @@
 {
   "projects": {
-    "osl": "our-something-lovely"
+    "default": "our-something-lovely"
   }
 }

@@ -5,15 +5,25 @@
     .module('lovely.components.shop')
     .service('ShopService', ShopService)
 
-    ShopService.$inject = []
+    ShopService.$inject = ['$http']
 
-  function ShopService () {
+  function ShopService ($http) {
+
     this.subtotal = 0
 
     this.cart = {
       list: [],
       count: 0,
     }
+
+    // this.etsyInventory = {}
+    //
+    // this.getEtsy = () => {
+    //   return $http.get('https://openapi.etsy.com/v2/shops/12321055/listings/active/?api_key=1m25amydx181t3zdpj9ii318')
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    // }
 
     this.inventory = [
       {

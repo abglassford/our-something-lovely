@@ -8,6 +8,15 @@
         <h4 class="total right">Order Total: {{vm.total | monetize | currency}}</h4>
       </div>
     </div>
+    <div class="row" ng-show="!vm.cart.length">
+      <div class="col m12 card-panel noCart">
+        <h3 class="center">Your cart is empty!!</h3>
+        <p class="center">
+          click the "Shop" button to see all the cool stuff we have for you!
+        </p>
+        <img class="cart-logo"src="img/osl-logo.png" alt="" />
+      </div>
+    </div>
     <div class="item-list row card-panel"ng-repeat="item in vm.cart">
       <div class="col m4 s12">
         <div class="shop-image-div">
@@ -37,20 +46,15 @@
       <div class="class col m2 s4">
         <div class="row">
           <div class="quantity">
-            <div input-field ng-show="vm.edit">
-              <label for="cart-quantity-select">Quantity: </label>
-              <select class="cart-quantity-select right" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-options="number for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch>
-              </select>
-            </div>
-            <p ng-show="!vm.edit"><b>Quantity:</b> {{item.count}}</p>
+            <label for="cart-quantity">Quantity: </label>
+            <input name="cart-quantity"type="number" ng-disabled="!vm.edit" class="cart-quantity center" ng-model="item.multiplier" ng-init="item.multiplier = item.count">
           </div>
         </div>
-
         <div class="row">
           <a class="cartButton wave effect waves-light yellow lighten-1 btn black-text" ng-click="vm.showEdit(item)">
             <span ng-show="!vm.edit">Edit</span>
-            <span ng-show="vm.edit">Done</span></a>
-          <a class="cartButton wave effect waves-light btn deep-orange darken-4" ng-click="vm.remove(item)" ng-show="!vm.edit">Remove</a>
+            <span ng-show="vm.edit">Save</span></a>
+          <a class="cartButton wave effect waves-light btn deep-orange darken-4" ng-click="vm.remove(item)">Remove</a>
         </div>
 
       </div>
