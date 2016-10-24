@@ -61,3 +61,13 @@ body {
 .cart-quantity-select {
   width: 50px;
 }
+.noCart {
+  height: 550px;
+  text-align: center;
+}
+.cart-logo {
+  height: 50%;
+}
+.noCart h3 {
+  margin-top: 100px;
+}

@@ -13,17 +13,6 @@
     this.total = ShopService.subtotal
     this.cart = ShopService.cart.list
 
-    // this.getTotal = () => {
-    //   this.total = this.cart.reduce((prev, curr) => {
-    //     return prev.price * prev.count + curr.price * curr.count
-    //   })
-    // }
-
-    // console.log(this.getTotal());
-
-
-    // this.categories = Array.from(new Set(this.inventory.reduce((prev, curr) => [...prev, ...curr.categories], [])))
-
     this.showEdit = (item) => {
       if (this.edit === true) {
         item.count = item.multiplier
