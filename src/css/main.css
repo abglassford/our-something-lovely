@@ -58,8 +58,19 @@ body {
   padding: 0px 10px 0px 10px;
   box-shadow: none;
 }
-.cart-quantity-select {
-  width: 50px;
+.cart-quantity {
+  text-align: center;
+  width: 45px !important;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  /*border: none !important;*/
+}
+.quantity-select {
+  text-align: center;
+  width: 45px !important;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  /*border: none !important;*/
 }
 .noCart {
   height: 550px;

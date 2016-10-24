@@ -1,5 +1,5 @@
 ## To Do:
-- Search by name
+<!-- - Search by name -->
 <!-- - Search by category with drop down list -->
 <!-- - Table with column for image, and tea information -->
 <!-- - Quantity drop down number list -->
@@ -17,4 +17,4 @@
 - Ability to edit quantity
 - Editing quantity updates the sub-total and order total
 <!-- - Ability to remove a product, which then updates the order total -->
-- Items in checkout show the caffeine scale, ingredients, rating, and sub-total
+<!-- - Items in checkout show the caffeine scale, ingredients, rating, and sub-total -->

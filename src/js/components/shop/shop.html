@@ -66,10 +66,9 @@
     </div>
     <div class="class col m2 s4">
       <form class="addForm" name="addForm" ng-submit="vm.addToCart(item)" method="post">
-        <div input-field>
+        <div class="quantity">
           <label for="quantity-select">Quantity: </label>
-          <select class="quantity-select right" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-options="number for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" material-select watch ng-disabled="!item.inStock">
-          </select>
+          <input type="number" class="quantity-select center" ng-model="item.multiplier" ng-init="item.multiplier = 1" ng-disabled="!item.inStock">
         </div>
         <div class="">
           <button class="wave effect waves-light btn add-to-cart" ng-disabled="!item.inStock">Add To Cart</button>
