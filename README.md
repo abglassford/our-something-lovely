@@ -18,3 +18,5 @@
 <!-- - Editing quantity updates the sub-total and order total -->
 <!-- - Ability to remove a product, which then updates the order total -->
 <!-- - Items in checkout show the caffeine scale, ingredients, rating, and sub-total -->
+
+deployed site: https://our-something-lovely.firebaseapp.com
