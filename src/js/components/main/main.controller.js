@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('lovely.components.main', ['main'])
+    .module('lovely.components.main')
     .controller('mainController', mainController);
 
   mainController.$inject = ['$scope', 'lovelyService'];

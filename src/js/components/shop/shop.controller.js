@@ -5,12 +5,12 @@
     .module('lovely.components.shop')
     .controller('ShopController', ShopController)
 
-    ShopController.$inject = ['$location', 'ShopService']
+    ShopController.$inject = ['$location', 'lovelyService']
 
-    function ShopController ($location, ShopService) {
-      this.cartCount = () => ShopService.cart.count
-      this.categories = ShopService.categories
-      this.inventory = ShopService.inventory
+    function ShopController ($location, lovelyService) {
+      this.cartCount = () => lovelyService.cart.count
+      this.categories = lovelyService.categories
+      this.inventory = lovelyService.inventory
       this.priceSort = (price) => {
         this.price = price
       }
@@ -19,14 +19,14 @@
         this.category = category
       }
       this.addToCart = (item) => {
-        if (!ShopService.cart.list.includes(item)) {
+        if (!lovelyService.cart.list.includes(item)) {
           item.count = item.multiplier
-          ShopService.cart.list.push(item)
+          lovelyService.cart.list.push(item)
         } else {
           item.count += item.multiplier
         }
-        ShopService.cart.count += item.multiplier
-        ShopService.subtotal += item.price * item.multiplier
+        lovelyService.cart.count += item.multiplier
+        lovelyService.subtotal += item.price * item.multiplier
         item.multiplier = 1
       }
     }

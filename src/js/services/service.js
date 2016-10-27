@@ -2,12 +2,12 @@
   'use strict';
 
   angular
-    .module('lovely.components.shop')
-    .service('ShopService', ShopService)
+    .module('lovely.services')
+    .service('lovelyService', LovelyService)
 
-    ShopService.$inject = ['$http']
+    LovelyService.$inject = ['$http']
 
-  function ShopService ($http) {
+  function LovelyService ($http) {
 
     this.subtotal = 0
 

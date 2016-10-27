@@ -5,25 +5,25 @@
     .module('lovely.components.cart')
     .controller('cartController', CartController)
 
-    CartController.$inject = ['ShopService']
+    CartController.$inject = ['lovelyService']
 
-  function CartController (ShopService) {
+  function CartController (lovelyService) {
 
     this.edit = false
-    this.total = ShopService.subtotal
-    this.cart = ShopService.cart.list
+    this.total = lovelyService.subtotal
+    this.cart = lovelyService.cart.list
 
     this.showEdit = (item) => {
       if (this.edit === true) {
         if (item.multiplier < item.count) {
-          ShopService.cart.count -= (item.count - item.multiplier)
-          ShopService.subtotal -= item.price * (item.count - item.multiplier)
-          this.total = ShopService.subtotal
+          lovelyService.cart.count -= (item.count - item.multiplier)
+          lovelyService.subtotal -= item.price * (item.count - item.multiplier)
+          this.total = lovelyService.subtotal
           item.count = item.multiplier
         } else if (item.multiplier > item.count) {
-          ShopService.cart.count += (item.multiplier - item.count)
-          ShopService.subtotal += item.price * (item.multiplier - item.count)
-          this.total = ShopService.subtotal
+          lovelyService.cart.count += (item.multiplier - item.count)
+          lovelyService.subtotal += item.price * (item.multiplier - item.count)
+          this.total = lovelyService.subtotal
           item.count = item.multiplier
         }
         this.edit = false
@@ -34,10 +34,10 @@
     }
 
     this.remove = (item) => {
-      ShopService.cart.list.splice(ShopService.cart.list.indexOf(item), 1)
-      ShopService.cart.count -= item.count
-      ShopService.subtotal -= (item.count * item.price)
-      this.total = ShopService.subtotal
+      lovelyService.cart.list.splice(lovelyService.cart.list.indexOf(item), 1)
+      lovelyService.cart.count -= item.count
+      lovelyService.subtotal -= (item.count * item.price)
+      this.total = lovelyService.subtotal
     }
   }
 
